@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <!----------------------------------------------------------------------------------------------------------------------------------->
+    <!--------------------------------------------------------- LOGFORM ----------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------------------------->
+
+    <p style="color: white; font-size: 5vw; padding: 6vw 45vw; font-family: 'Bangers', cursive; background-image: url(images/allDark.png);">
+        LogIn</p>
+
+    <div id="log-back"></div>
+    <div id="log">
+        <div id="titleKeeper">
+            <p style="color: white; font-size: 4vw; font-family: 'Bangers', cursive; padding: 4vw 3vw;transition: 0.5s;"
+                id="loginId">LogIn</p>
+        </div>
+        <div id="trasnsSquare">
+            <i class="fas fa-user log-inner-icon" style="height: 0vw; overflow: hidden; padding: 0vw;transition: 1s;"
+                id="userKeeper"><input type="text" name="username" id="username" placeholder="User Name"></i>
+            <i class="fas fa-envelope log-inner-icon" style="transform: translateY(-50%);transition: 1.5s;"
+                id="emailKeeper"><input type="email" name="email" id="email" placeholder="Email"></i>
+            <i class="fas fa-lock log-inner-icon" style="transform: translateY(-50%);transition: 1.5s;"
+                id="passKeeper"><input type="password" name="password" id="password" placeholder="Password"></i>
+            <i class="fas fa-lock log-inner-icon" style="height: 0vw; overflow: hidden; padding: 0vw;transition: 1.5s;"
+                id="repassKeeper"><input type="password" name="repassword" id="repassword"
+                    placeholder="Re-Password"></i>
+            <button class="btn btn-outline-light"
+                style="margin: 0.5vw 4vw; width: 5vw; height: 2.5vw; font-size:1vw;border-radius: 20px;transform: translateY(-50%);transition: 1.5s;padding: 0vw;"
+                id="btnKeeper">LOGIN</button>
+        </div>
+        <p style="padding-left: 6vw;color: white; font-size: 1.3vw;transform: translateY(-50%);transition: 1.5s;"
+            id="sentKeeper">Don't you have account? <span id="signup"
+                style="background-color: transparent; color: rgb(255, 145, 145); border: none;outline: none;cursor: pointer;">SignUp</span>
+        </p>
+    </div>
+
+    <!----------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
+
+    <script>
+
+        $("#signup").click(function () {
+            if ($("#signup").text() == "SignUp") {
+                $("#emailKeeper").css("transform", "translateY(0%)")
+                $("#passKeeper").css("transform", "translateY(0%)")
+                $("#sentKeeper").css("transform", "translateY(0%)")
+                $("#btnKeeper").css("transform", "translateY(0%)")
+                $("#repassKeeper").css("height", "2vw")
+                $("#userKeeper").css("height", "2vw")
+
+                $("#signup").text("");
+                setTimeout(function () {
+                    typed = new Typed("#signup", {
+                        strings: [
+                            "LogIn"
+                        ], typeSpeed: 100, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                }, 2500);
+
+                setTimeout(function () {
+                    $("#loginId").text("");
+                    $("#loginId").css("padding-left", "2vw");
+                    typed = new Typed("#loginId", {
+                        strings: [
+                            "SignUp"
+                        ], typeSpeed: 100, startDelay: 500, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                    $("#btnKeeper").text("");
+                    typed = new Typed("#btnKeeper", {
+                        strings: [
+                            "SIGNUP"
+                        ], typeSpeed: 100, startDelay: 500, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                }, 4500);
+            }
+            else{
+                $("#emailKeeper").css("transform", "translateY(-50%)")
+                $("#passKeeper").css("transform", "translateY(-50%)")
+                $("#sentKeeper").css("transform", "translateY(-50%)")
+                $("#btnKeeper").css("transform", "translateY(-50%)")
+                $("#repassKeeper").css("height", "0vw")
+                $("#userKeeper").css("height", "0vw")
+
+                $("#signup").text("");
+                setTimeout(function () {
+                    typed = new Typed("#signup", {
+                        strings: [
+                            "SignUp"
+                        ], typeSpeed: 100, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                }, 2500);
+
+                setTimeout(function () {
+                    $("#loginId").text("");
+                    $("#loginId").css("padding-left", "3vw");
+                    typed = new Typed("#loginId", {
+                        strings: [
+                            "LogIn"
+                        ], typeSpeed: 100, startDelay: 500, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                    $("#btnKeeper").text("");
+                    typed = new Typed("#btnKeeper", {
+                        strings: [
+                            "LOGIN"
+                        ], typeSpeed: 100, startDelay: 500, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                }, 4500);
+            }
+        });
+
+    </script>
+</body>
+
+</html>

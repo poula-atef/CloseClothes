@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body,header{
+    scroll-behavior: smooth;
+}
+
+.page-title{
+    font-size: 2.8vw;
+    font-family: 'Bangers', cursive;
+}
+.decoration-none:hover{
+    text-decoration: none;
+}
+
+.nav-font{
+    font-size: 1.8vw;
+}
+
+nav{
+    transition: 0.6s;
+}
+
+.sticky{
+    background-color: white;
+    box-shadow: 0vw 0.02vw 5px rgb(134, 134, 134);
+    transition: 0.6s;
+}
+
+.sticky .first-half{
+    color: black;
+    transition: 0.6s;
+}
+
+.sticky .page-title{
+    font-size: 2.5vw;
+}
+
+.sticky .nav-font{
+    font-size: 1.5vw;
+}
+
+.first-half{
+    color: white;
+    transition: 0.6s;
+}
+
+.second-half{
+    color: rgb(255, 0, 0);
+    transition: 0.6s;
+}
+
+@media only screen and (max-width: 310px){
+    .tool-bar-div{
+        flex: 0 0 58.333333% !important;
+        max-width: 58.333333% !important;    
+    }
+}
+
+.fashion-kind{
+    font-size: 3vw;
+    margin: 4vw;
+    padding-top: 16vw;
+    font-family: 'Pacifico', cursive;
+}
+
+p.fashion-kind::first-letter{
+    color: red;
+    font-size: 3.8vw;
+}
+
+
+li a{
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 2vw;    
+    transition-property: margin-left;
+    transition-duration: 1s;
+}
+
+li a:hover{
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+    margin-left: 0.5vw ;
+}
+
+#footer-category{
+    padding-top: 0.5vw;
+    padding-left: 3.5vw;
+}
+
+#categ{
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 2.7vw;
+    padding-top: 3vw;
+    padding-left: 2vw;     
+}
+
+.contact{
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: rgb(99, 99, 99);
+    position: relative;
+}
+
+.contact::before{
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5vw;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.coloredImage{
+    border-bottom: 0.25vw solid;
+    position: absolute;
+    margin-top: 0.8vw;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#faceColor{
+    color: #4d73c5;
+    border-bottom-color: #4d73c5;
+}
+
+#whatsColor{
+    color: #13b19e;
+    border-bottom-color: #13b19e;
+}
+
+#instaColor{
+    color: rgb(248, 96, 121);
+    border-bottom-color:  rgb(248, 96, 121);
+}
+
+#twitColor{
+    color: #00acee ;
+    border-bottom-color: #00acee;
+}
+
+#youColor{
+    color: red ;
+    border-bottom-color: red;
+}
+
+#facebook:hover #faceColor,#whatsapp:hover #whatsColor,#instagram:hover #instaColor,
+#twitter:hover #twitColor,#youtube:hover #youColor{
+    height: 70%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+#log-back{
+    background-image: url("../images/logBack.jpg"); 
+    background-size: cover; 
+    width: 90%; 
+    height: 52vw; 
+    margin: 1vw 5vw; 
+    border-radius: 15px; 
+    filter: blur(0.2vw); 
+    -webkit-filter: blur(0.2vw);
+}
+
+#log{
+    width: 30vw; 
+    height: 35vw; 
+    background-color: black;
+    opacity: 0.6; 
+    transform: translate(120%,-130%); 
+    margin-bottom: -34vw;
+    border-radius: 15px;
+    box-shadow: 0vw 0vw 1vw grey;
+}
+
+#log div{
+    width: 33vw;
+    padding: 0.1vw 8vw;
+}
+
+#username,#password,#email,#repassword{
+    background: none;
+    border: none;
+    outline: none; 
+    border-radius: 15vw; 
+    color: white;
+    padding-left: 0.75vw; 
+    margin-left: 0.5vw; width:15vw;
+    height: 2vw; 
+    font-size: 1.3vw;
+    transition: 0.5s;
+}
+
+.log-inner-icon{
+    color: white;
+    padding-bottom: 0.5vw; 
+    font-size: 1.5vw;
+}
+
+#titleKeeper{
+    height: 11vw;
+    width: 100%;
+}
+
+@media only screen and (max-width: 560px) {
+    #titleKeeper{
+        height: 5vw;
+    }
+    #loginId{
+        padding-top: 1vw !important;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #trasnsSquare{
+        transform: translateY(-10%);
+    }
+    #sentKeeper{
+        transform: translateY(-300%) !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .tool-bar-div a:last-child{
+        display: none  !important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #trasnsSquare{
+        transform: translateY(-15%);
+    }
+    #sentKeeper{
+        transform: translateY(-600%) !important;
+    }
+    #btnKeeper{
+        transform: translateY(-220%) !important;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    #trasnsSquare{
+        transform: translateY(-20%);
+    }
+    #sentKeeper{
+        transform: translateY(-900%) !important;
+    }
+    #btnKeeper{
+        transform: translateY(-220%) !important;
+    }
+}

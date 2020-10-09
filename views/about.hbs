@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+
+<body>
+
+    {{!-----------------------------------------------------------------------------------------------------------------------------------}}
+    {{!--------------------------------------------------------- LOGFORM -----------------------------------------------------------------}}
+    {{!-----------------------------------------------------------------------------------------------------------------------------------}}
+
+    <p style="color: white; font-size: 5vw; padding: 6vw 45vw; font-family: 'Bangers', cursive; background-image: url(images/allDark.png);">
+        About</p>
+
+    <div id="log-back"></div>
+    <div id="log">
+            <p style="color: white; font-size: 3vw;font-family: 'Bangers', cursive;display:table;margin:auto;padding-top:5vw;">
+        Close Clothes</p>
+        <p style="color:white;font-size:2vw;text-align: center;">is a site for selling clothes made by <strong>POULA ATEF</strong> using HTML, CSS, BOOTSTRAP, JS, JQUERY, AJAX, NODEJS.</p>
+        <p style="color:white;font-size:2vw;text-align: center;">Hope you like it ♥♥.</p>
+        <p  style="color:white;font-size:2vw;text-align: center;"><i class="fas fa-envelope"></i> bebobob223@gmail.com</p>
+        <p  style="color:white;font-size:2vw;text-align: center;"><i class="fas fa-phone-alt"></i> 01204562237</p>
+    </div>
+
+    <!----------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
+
+    <script>
+
+        $("#signup").click(function () {
+            if ($("#signup").text() == "SignUp") {
+                $("#emailKeeper").css("transform", "translateY(0%)")
+                $("#passKeeper").css("transform", "translateY(0%)")
+                $("#sentKeeper").css("transform", "translateY(0%)")
+                $("#btnKeeper").css("transform", "translateY(0%)")
+                $("#repassKeeper").css("height", "2vw")
+                $("#userKeeper").css("height", "2vw")
+
+                $("#signup").text("");
+                setTimeout(function () {
+                    typed = new Typed("#signup", {
+                        strings: [
+                            "LogIn"
+                        ], typeSpeed: 100, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                }, 2500);
+
+                setTimeout(function () {
+                    $("#loginId").text("");
+                    $("#loginId").css("padding-left", "2vw");
+                    typed = new Typed("#loginId", {
+                        strings: [
+                            "SignUp"
+                        ], typeSpeed: 100, startDelay: 500, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                    $("#btnKeeper").text("");
+                    typed = new Typed("#btnKeeper", {
+                        strings: [
+                            "SIGNUP"
+                        ], typeSpeed: 100, startDelay: 500, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                }, 4500);
+            }
+            else{
+                $("#emailKeeper").css("transform", "translateY(-50%)")
+                $("#passKeeper").css("transform", "translateY(-50%)")
+                $("#sentKeeper").css("transform", "translateY(-50%)")
+                $("#btnKeeper").css("transform", "translateY(-50%)")
+                $("#repassKeeper").css("height", "0vw")
+                $("#userKeeper").css("height", "0vw")
+
+                $("#signup").text("");
+                setTimeout(function () {
+                    typed = new Typed("#signup", {
+                        strings: [
+                            "SignUp"
+                        ], typeSpeed: 100, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                }, 2500);
+
+                setTimeout(function () {
+                    $("#loginId").text("");
+                    $("#loginId").css("padding-left", "3vw");
+                    typed = new Typed("#loginId", {
+                        strings: [
+                            "LogIn"
+                        ], typeSpeed: 100, startDelay: 500, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                    $("#btnKeeper").text("");
+                    typed = new Typed("#btnKeeper", {
+                        strings: [
+                            "LOGIN"
+                        ], typeSpeed: 100, startDelay: 500, smartBackspace: true,
+                        onComplete: function (self) { self.cursor.remove() }
+                    });
+                }, 4500);
+            }
+        });
+
+    </script>
+</body>
+
+</html>

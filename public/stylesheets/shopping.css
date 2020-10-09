@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body,header{
+    scroll-behavior: smooth;
+}
+
+.page-title{
+    font-size: 2.8vw;
+    font-family: 'Bangers', cursive;
+}
+.decoration-none:hover{
+    text-decoration: none;
+}
+
+.nav-font{
+    font-size: 1.8vw;
+}
+
+nav{
+    transition: 0.6s;
+}
+
+.sticky{
+    background-color: white;
+    box-shadow: 0vw 0.02vw 5px rgb(134, 134, 134);
+    transition: 0.6s;
+}
+
+.sticky .first-half{
+    color: black;
+    transition: 0.6s;
+}
+
+.sticky .page-title{
+    font-size: 2.5vw;
+}
+
+.sticky .nav-font{
+    font-size: 1.5vw;
+}
+
+.first-half{
+    color: white;
+    transition: 0.6s;
+}
+
+.second-half{
+    color: rgb(255, 0, 0);
+    transition: 0.6s;
+}
+
+@media only screen and (max-width: 310px){
+    .tool-bar-div{
+        flex: 0 0 58.333333% !important;
+        max-width: 58.333333% !important;    
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .tool-bar-div a:last-child{
+        display: none  !important;
+    }
+}
+
+.fashion-kind{
+    font-size: 3vw;
+    margin: 4vw;
+    padding-top: 16vw;
+    font-family: 'Pacifico', cursive;
+}
+
+p.fashion-kind::first-letter{
+    color: red;
+    font-size: 3.8vw;
+}
+
+
+li a{
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 2vw;    
+    transition-property: margin-left;
+    transition-duration: 1s;
+}
+
+li a:hover{
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+    margin-left: 0.5vw ;
+}
+
+#footer-category{
+    padding-top: 0.5vw;
+    padding-left: 3.5vw;
+}
+
+#categ{
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 2.7vw;
+    padding-top: 3vw;
+    padding-left: 2vw;     
+    margin: auto;
+}
+
+.contact{
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: rgb(99, 99, 99);
+    position: relative;
+}
+
+.contact::before{
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5vw;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.coloredImage{
+    border-bottom: 0.25vw solid;
+    position: absolute;
+    margin-top: 0.8vw;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#faceColor{
+    color: #4d73c5;
+    border-bottom-color: #4d73c5;
+}
+
+#whatsColor{
+    color: #13b19e;
+    border-bottom-color: #13b19e;
+}
+
+#instaColor{
+    color: rgb(248, 96, 121);
+    border-bottom-color:  rgb(248, 96, 121);
+}
+
+#twitColor{
+    color: #00acee ;
+    border-bottom-color: #00acee;
+}
+
+#youColor{
+    color: red ;
+    border-bottom-color: red;
+}
+
+#facebook:hover #faceColor,#whatsapp:hover #whatsColor,#instagram:hover #instaColor,
+#twitter:hover #twitColor,#youtube:hover #youColor{
+    height: 70%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.crd {
+    transition: 0.5s;
+    width: 20vw;
+    box-shadow: 0vw 0vw .25vw black;
+    margin: 0vw 2vw;
+    float: left;
+    height: 26vw;
+    color: white;
+    margin-bottom: 2vw;
+}
+
+.crd-body {
+    width: 20vw;
+    height: 26.1vw;
+    z-index: 0;
+    overflow: hidden;
+    line-height: 2vw;
+    transform: translateY(-82%);
+    opacity: 0;
+}
+
+.crd-head {
+    width: 20vw;
+    height: 26vw;
+    transform: translate(-1.5vw, 0.5vw);
+}
+
+.crd-image {
+    max-width: 83%;
+    height: 25vw;
+    margin: auto;
+    display: block;
+    z-index: 1;
+}
+
+.shade {
+    width: 20vw;
+    height: 26.1vw;
+    background-color: black;
+    opacity: 0;
+    transform: translate(1.5vw, -25.55vw);
+}
+
+.crd:hover .shade{
+    opacity: 0.5;
+}
+
+.crd:hover .crd-body{
+    opacity: 1;
+}
+
+.crd:hover {
+    box-shadow: 0vw 0vw .5vw black;
+    transform: translateY(-1.7%);
+}
+
+#orderBtn{
+    padding: 1.5vw 3vw;
+    margin: 5vw auto;
+    display: block;
+    border-radius: 45px !important;
+    font-size:1.3vw;
+}
+
+.delete-from-card{
+    padding: 0.3vw 0.5vw !important;
+    display: block !important;
+    margin: auto !important;    
+    font-size: 1vw !important;
+}
+
+@media only screen and (max-width:500px){
+    .card-line-height{
+        line-height: 1.6vw !important;
+    }
+}

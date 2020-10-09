@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body,header{
+    scroll-behavior: smooth;
+}
+
+.page-title{
+    font-size: 2.8vw;
+    font-family: 'Bangers', cursive;
+}
+
+.decoration-none:hover{
+    text-decoration: none;
+}
+
+.nav-font{
+    font-size: 1.8vw;
+}
+
+nav{
+    transition: 0.6s;
+}
+
+.sticky{
+    background-color: white;
+    box-shadow: 0vw 0.02vw 5px rgb(134, 134, 134);
+    transition: 0.6s;
+}
+
+.sticky .first-half{
+    color: black;
+    transition: 0.6s;
+}
+
+.sticky .page-title{
+    font-size: 2.5vw;
+}
+
+.sticky .nav-font{
+    font-size: 1.5vw;
+}
+
+.first-half{
+    color: white;
+    transition: 0.6s;
+}
+
+.second-half{
+    color: rgb(255, 0, 0);
+    transition: 0.6s;
+}
+
+@media only screen and (max-width: 310px){
+    .tool-bar-div{
+        flex: 0 0 58.333333% !important;
+        max-width: 58.333333% !important;    
+    }
+}
+
+.fashion-kind{
+    font-size: 3vw;
+    margin: 4vw;
+    padding-top: 16vw;
+    font-family: 'Pacifico', cursive;
+}
+
+p.fashion-kind::first-letter{
+    color: red;
+    font-size: 3.8vw;
+}
+
+#familyImage{
+    width: 95%; 
+    height: 44.5vw; 
+    background-image: url('../images/all.png');
+    background-repeat: no-repeat;
+    background-size:  cover;
+    display: block;
+    margin-top: 22vw;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+#innerFamilyImage{
+    margin: auto;
+    padding: 16.3vw;
+    display: block;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 4vw;
+    border-radius: 10px;
+    opacity: 0;
+    color: white;
+    background-color: black;
+}
+
+#shoppingBtn{
+    padding: 1.5vw 3vw;
+    margin: 5vw auto;
+    display: block;
+    border-radius: 45px !important;
+    font-size:1.3vw;
+}
+
+.fade-from-left{
+    animation-name: fade-left;
+    animation-duration:2s;
+}
+
+@keyframes fade-left{
+    from{
+        opacity: 0;
+        transform: translateX(5%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-from-right{
+    animation-name: fade-right;
+    animation-duration:2s;
+}
+
+@keyframes fade-right{
+    from{
+        opacity: 0;
+        transform: translateX(-5%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-from-down-image{
+    animation-name: fade-down-image;
+    animation-duration:2s;
+}
+
+@keyframes fade-down-image{
+    from{
+        opacity: 0;
+        transform: translateY(5%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-from-down-text{
+    animation-name: fade-down-text;
+    animation-duration:2s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-down-text{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.65;
+    }
+}
+
+li a{
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 2vw;    
+    transition-property: margin-left;
+    transition-duration: 1s;
+}
+
+li a:hover{
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+    margin-left: 0.5vw ;
+}
+
+#footer-category{
+    padding-top: 0.5vw;
+    padding-left: 3.5vw;
+}
+
+#categ{
+    font-family: 'Pacifico', cursive;
+    color: white;
+    font-size: 2.7vw;
+    padding-top: 3vw;
+    padding-left: 2vw;     
+}
+
+.contact{
+    font-size: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: rgb(99, 99, 99);
+    position: relative;
+}
+
+.contact::before{
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5vw;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+.coloredImage{
+    border-bottom: 0.25vw solid;
+    position: absolute;
+    margin-top: 0.8vw;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#faceColor{
+    color: #4d73c5;
+    border-bottom-color: #4d73c5;
+}
+
+#whatsColor{
+    color: #13b19e;
+    border-bottom-color: #13b19e;
+}
+
+#instaColor{
+    color: rgb(248, 96, 121);
+    border-bottom-color:  rgb(248, 96, 121);
+}
+
+#twitColor{
+    color: #00acee ;
+    border-bottom-color: #00acee;
+}
+
+#youColor{
+    color: red ;
+    border-bottom-color: red;
+}
+
+#facebook:hover #faceColor,#whatsapp:hover #whatsColor,#instagram:hover #instaColor,
+#twitter:hover #twitColor,#youtube:hover #youColor{
+    height: 70%;
+}
+

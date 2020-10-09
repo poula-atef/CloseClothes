@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/shopping.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    {{!-----------------------------------------------------------------------------------------------------------------------------------}}
+    {{!----------------------------------------------------------- BODY ------------------------------------------------------------------}}
+    {{!-----------------------------------------------------------------------------------------------------------------------------------}}
+
+    <p
+        style="color: white; font-size: 5vw; padding: 6vw 41vw; font-family: 'Bangers', cursive; background-image: url(images/allDark.png);">
+        Shopping</p>
+
+    <p style="color: black; font-size: 4vw; padding: 2vw 38vw; font-family: 'Bangers', cursive;">{{depName}}</p>
+
+    <div style="margin-top: 5vw;margin-bottom: 5vw;inline-size: max-content;width:100%">
+
+        {{#each items}}
+
+        <div class="crd">
+            <input type="text" style="display: none;" value={{this.name}}>
+            <div class="crd-head">
+                <img src={{this.image}} class="crd-image">
+                <div class="shade"></div>
+            </div>
+            <div class="crd-body">
+                <div style=" margin-left: 0.25vw;">
+                    <span style="font-size: 1.2vw;">{{this.name}}</span>
+                    <br>
+                    <span style="font-size: 1.2vw;"><span style="font-weight:800;"> Sizes:
+                        </span><span>{{this.sizes}}</span></span>
+                    <br>
+
+                    {{#if this.three}}
+                    <span style="font-size: 1.2vw;color: white;"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i
+                            class="far fa-star"></i></span>
+                    {{/if}}
+                    {{#if this.threeHalf}}
+                    <span style="font-size: 1.2vw;color: white;"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i
+                            class="far fa-star"></i></span>
+                    {{/if}}
+                    {{#if this.four}}
+                    <span style="font-size: 1.2vw;color: white;"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="far fa-star"></i></span>
+                    {{/if}}
+                    {{#if this.fourHalf}}
+                    <span style="font-size: 1.2vw;color: white;"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star-half-alt"></i></span>
+                    {{/if}}
+                    {{#if this.five}}
+                    <span style="font-size: 1.2vw;color: white;"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></span>
+                    {{/if}}
+                    <br>
+                    <span style="font-size: 1.2vw;"><i class="fas fa-shopping-cart"></i> {{this.buy}}</span>
+                    <br>
+                    <span style="font-size: 1.2vw;"><i class="fas fa-money-bill-wave"></i> {{this.price}} EGP
+                        {{#if this.offer}}
+                        <span class="badge badge-danger"> {{this.offer}}%OFF</span>
+                        {{/if}}
+                    </span>
+                    <br>
+                </div>
+
+                <form class="myform" method="POST">
+                    <span style="display: none;" class="_idC">{{this._id}}</span>
+                    <span style="display: none;" class="nameC">{{this.name}}</span>
+                    <span style="display: none;" class="sizesC">{{this.sizes}}</span>
+                    <span style="display: none;" class="ratingC">{{this.rating}}</span>
+                    <span style="display: none;" class="buyC">{{this.buy}}</span>
+                    <span style="display: none;" class="priceC">{{this.price}}</span>
+                    <span style="display: none;" class="offerC">{{this.offer}}</span>
+                    <span style="display: none;" class="imageC">{{this.image}}</span>
+                    <span style="display: none;" class="threeC">{{this.three}}</span>
+                    <span style="display: none;" class="threeHalfC">{{this.threeHalf}}</span>
+                    <span style="display: none;" class="fourC">{{this.four}}</span>
+                    <span style="display: none;" class="fourHalfC">{{this.fourHalf}}</span>
+                    <span style="display: none;" class="fiveC">{{this.five}}</span>
+                    <button class="btn btn-outline-light addToCard" type="submit"
+                        style="width: 100%;font-size: 1.2vw;">ADD TO
+                        CARD</button>
+                </form>
+            </div>
+        </div>
+
+        {{/each}}
+
+    </div>
+
+
+    {{!-----------------------------------------------------------------------------------------------------------------------------------}}
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="javascripts/shopping.js"></script>
+    <script>        
+        $(function ($) {
+            $("form").on('submit', function (event) {
+                event.preventDefault();
+                alert("Added!!");
+
+                var name = $(this).children(".nameC").text();
+                var id = $(this).children("._idC").text();
+                var sizes = $(this).children(".sizesC").text();
+                var rating = $(this).children(".ratingC").text();
+                var buy = $(this).children(".buyC").text();
+                var price = $(this).children(".priceC").text();
+                var offer = $(this).children(".offerC").text();
+                var image = $(this).children(".imageC").text();
+                var three = $(this).children(".threeC").text();
+                var threeHalf = $(this).children(".threeHalfC").text();
+                var four = $(this).children(".fourC").text();
+                var fourHalf = $(this).children(".fourHalfC").text();
+                var five = $(this).children(".fiveC").text();
+
+                var item = {
+                    id, name, sizes, rating, buy, price, offer
+                    , image, three, threeHalf, four, fourHalf, five
+                }
+
+
+                $.ajax({
+                    global: false,
+                    type: 'POST',
+                    data: JSON.stringify(item),
+                    contentType: 'application/json',
+                    url: '/API/insertCard',
+                    success: function (data) {
+                        console.log('success');
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/front page.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    {{!-----------------------------------------------------------------------------------------------------------------------------------}}
+    {{!----------------------------------------------------------- BODY ------------------------------------------------------------------}}
+    {{!-----------------------------------------------------------------------------------------------------------------------------------}}
+
+    <img src="images/7.jpg" alt="background image" style="width: 100%; height: auto;">
+
+    {{!--------------------------------------------------------- FAMILY ------------------------------------------------------------------}}
+
+    <div>
+        <p style="width: 100%;">
+            <img src="images/4.jpg" style="width: 35%; height: auto; float: right; margin-top: 2vw; margin-right: 15vw;"
+                id="first" class="left-animation-element">
+        </p>
+        <p class="fashion-kind right-animation-element">
+            We have all kinds of modern clothes for all tastes of women and all international brands.
+        </p>
+    </div>
+
+    {{!--------------------------------------------------------- MEN ------------------------------------------------------------------}}
+
+    <div style="margin-top: 15vw;">
+        <p style="width: 100%;">
+            <img src="images/20.jpg"
+                style="width: 25%; height: auto; float: left; margin-top: 5vw; margin-left: 10vw; margin-right: 10vw;"
+                class="right-animation-element">
+        </p>
+        <p class="fashion-kind left-animation-element" style="padding-top: 9vw;">
+            We also took care of the part about the elegance of the gal, which is suitable for all types of men.
+        </p>
+    </div>
+
+
+    {{!--------------------------------------------------------- CLASSIC ------------------------------------------------------------------}}
+
+    <div style="margin-top: -5vw;">
+        <p style="width: 100%; margin-top: 12vw;">
+            <img src="images/9.jpg" style="width: 25%; height: auto; float: right; margin-top: 5vw; margin-right: 15vw;"
+                class=" left-animation-element">
+        </p>
+        <p class="fashion-kind right-animation-element">
+            We have a bundle of the best classic clothes, the rare and the famous ones.
+        </p>
+    </div>
+
+    {{!--------------------------------------------------------- FAMILY ------------------------------------------------------------------}}
+
+    <div style="width: 100%;">
+        <div id="familyImage" class="down-animation-element">
+            <div id="innerFamilyImage" class="inner-down-animation-element">
+                You will find all what you need that fit any member of the family.
+            </div>
+        </div>
+    </div>
+
+
+    <form action="/allCategories" method="get">
+        <button type="submit" class="btn btn-outline-danger" id="shoppingBtn">Start Shopping <i
+                class="fas fa-angle-double-right"></i> </button>
+    </form>
+    {{!-----------------------------------------------------------------------------------------------------------------------------------}}
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="javascripts/layout.js">
+    </script>
+
+</body>
+
+</html>
